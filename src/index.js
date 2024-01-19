@@ -1,7 +1,7 @@
 // write your code here 
 fetch('http://localhost:3000/ramens')
 .then(resp => resp.json())
-.then(data => console.log(data))
+.then(data => renderRamen(data))
 
 // fetch the data 
 // create js variables
@@ -9,3 +9,16 @@ fetch('http://localhost:3000/ramens')
 // Attach event listeners
 // Assign data to the DOM elements
 // Append the new eleemnts to the DOM
+
+function renderRamen(ramenArr){
+
+const ramenCon = document.querySelector('#ramen-menu')
+
+ramenArr.forEach((ramenObj) => {
+    const image = document.createElement('img')
+    image.src = ramenObj.image
+    ramenCon.appendChild(image)
+    })
+
+
+}
