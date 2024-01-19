@@ -72,6 +72,11 @@ form.addEventListener('submit', (e) => handleNewRamen(e))
             }
     console.log(newRamen)
 renderRamen([newRamen])
+        form.name.value = ""
+        form.restaurant.value = ""
+        form.image.value = ""
+        form.rating.value = ""
+        form['new-comment'].value = ""
     }
  
 
