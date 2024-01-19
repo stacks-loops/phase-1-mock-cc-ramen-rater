@@ -15,10 +15,33 @@ function renderRamen(ramenArr){
 const ramenCon = document.querySelector('#ramen-menu')
 
 ramenArr.forEach((ramenObj) => {
-    const image = document.createElement('img')
-    image.src = ramenObj.image
-    ramenCon.appendChild(image)
+    const ramenImage = document.createElement('img')
+    ramenImage.src = ramenObj.image
+    ramenCon.appendChild(ramenImage)
+
+//details on click
+ramenImage.addEventListener('click', (e)=> handleClickEvent(e))
+function handleClickEvent(e){
+    //where they go
+
+
+    const nameLoc = document.querySelector('.name')
+    const imageLoc = document.querySelector('.detail-image')
+    const restLoc = document.querySelector('.restaurant')
+    const ratingLoc = document.getElementById('rating-display').textContent = ramenObj.rating
+    const commentLoc = document.querySelector('#comment-display')
+    //give the variables the info
+    nameLoc.textContent = ramenObj.name
+    restLoc.textContent = ramenObj.restaurant
+    imageLoc.src = ramenObj.image
+    // ratingLoc.textContent = ramenObj.rating
+    commentLoc.textContent = ramenObj.comment
+
+
+//end of click event func
+            }
+//end of forEach
     })
 
-
+//end of renderRamen
 }
