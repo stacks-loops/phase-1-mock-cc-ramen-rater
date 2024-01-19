@@ -45,3 +45,23 @@ function handleClickEvent(e){
 
 //end of renderRamen
 }
+
+//ramen form submission event
+
+form.addEventListener('submit', (e){
+
+    e.preventDefault()
+
+    const newRamenCon = document.querySelector('#new-ramen')
+
+    const newName = document.querySelector('#new-name')
+    const newRestaurant = document.querySelector('#new-restaurant')
+    const newImage = document.querySelector('#new-image')
+    const newRating = document.querySelector('#new-rating')
+    const newComment = document.querySelector('#new-comment')
+
+    const ramen
+    }
+fetch 
+ 
+}
