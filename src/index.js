@@ -46,22 +46,32 @@ function handleClickEvent(e){
 //end of renderRamen
 }
 
-//ramen form submission event
+//Add new ramen after form is submitted
+const form = document.querySelector('#new-ramen')
+form.addEventListener('submit', (e) => handleNewRamen(e))
 
-form.addEventListener('submit', (e){
-
+    function handleNewRamen(e){
+    
     e.preventDefault()
 
-    const newRamenCon = document.querySelector('#new-ramen')
+    // const newRamenCon = document.querySelector('#new-ramen')
 
-    const newName = document.querySelector('#new-name')
-    const newRestaurant = document.querySelector('#new-restaurant')
-    const newImage = document.querySelector('#new-image')
-    const newRating = document.querySelector('#new-rating')
-    const newComment = document.querySelector('#new-comment')
+    // const newName = document.querySelector('#new-name')
+    // const newRestaurant = document.querySelector('#new-restaurant')
+    // const newImage = document.querySelector('#new-image')
+    // const newRating = document.querySelector('#new-rating')
+    // const newComment = document.querySelector('#new-comment')
+    const newRamen = {
 
-    const ramen
+            name : e.target.name.value,
+            restaurant : e.target.restaurant.value,
+            image : e.target.image.value,
+            rating : e.target.rating.value,
+            comment : e.target['new-comment'].value
+
+            }
+    console.log(newRamen)
+renderRamen([newRamen])
     }
-fetch 
  
-}
+
